@@ -19,6 +19,13 @@ This app still in supports for further development in the future
 - run "pip install -r requirements.txt"
 - run "python manage.py runserver", default port is 8000
 
+------------------- For local docker testing --------------------
+- go to first 'dictapp' directory
+- run "docker build -t web:latest ."
+- after image succeed build, then run "docker run -d --name your-apps-name -e "PORT=8765" -e "DEBUG=1" -p 8000:8765 web:latest"
+- check container run status with "docker ps", if any errors occurs check in log tails
+- try to access localhost:8000/ in your local browser
+
 ------------------- For heroku deployment -----------------------
 
 - follow instruction on heroku deployment with container registry
